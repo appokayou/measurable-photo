@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>測れる写真 サポート</title>
+  <meta name="description" content="測れる写真のサポートページ。写真閲覧、メモ、ペン書き込み、共有、LiDAR測定、CSV・HTML出力についてご案内します。">
+  <style>
+    :root {
+      color-scheme: light;
+      --text: #18202a;
+      --muted: #667085;
+      --line: #d9e2ec;
+      --blue: #0b74de;
+      --green: #12805c;
+      --orange: #b86100;
+      --bg: #f6f9fc;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.75;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 42px;
+      align-items: center;
+      padding: 56px 0 44px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 0;
+      margin: 0 0 10px;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 1.15;
+      margin: 0 0 18px;
+    }
+
+    .lead {
+      color: #344054;
+      font-size: 18px;
+      margin: 0 0 18px;
+    }
+
+    .hero-shot {
+      display: block;
+      width: min(100%, 390px);
+      justify-self: center;
+      border-radius: 28px;
+      box-shadow: 0 22px 60px rgba(16, 24, 40, .18);
+    }
+
+    main {
+      padding: 34px 0 64px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin: 22px 0;
+    }
+
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 26px;
+      box-shadow: 0 10px 28px rgba(16, 24, 40, .05);
+    }
+
+    section {
+      margin-top: 18px;
+      border-top: 1px solid var(--line);
+      padding: 26px 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 1.35;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 0 0 8px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 1.2em;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .free {
+      color: var(--green);
+      background: #eaf8f1;
+    }
+
+    .paid {
+      color: var(--orange);
+      background: #fff4e5;
+    }
+
+    .shot {
+      padding: 14px;
+    }
+
+    .shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .english {
+      border-left: 4px solid var(--blue);
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .wrap {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .hero, .grid, .shots {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 42px 0 36px;
+      }
+
+      section, .card {
+        padding: 20px;
+      }
+
+      .hero-shot {
+        width: min(100%, 340px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero">
+      <div>
+        <p class="eyebrow">サポート · <a href="./en.html" lang="en">English</a></p>
+        <h1>測れる写真</h1>
+        <p class="lead">測れる写真は、現場写真の閲覧、メモ、ペン書き込み、共有を無料で使える写真管理アプリです。LiDAR対応端末では、写真上の距離測定やCSV・HTML出力にも対応します。</p>
+        <p class="muted">Measurable Photo helps you save field photos with notes and markups, then measure distances later on supported LiDAR devices.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>アプリ画面</h2>
+      <div class="shots">
+        <div class="shot">
+          <img src="./actual-measurement.png" alt="基準距離を2mと設定した縮尺換算デモ。実測値ではありません。">
+        </div>
+        <div class="shot">
+          <img src="./actual-library.png" alt="公開用サンプルを保存した実際の写真一覧画面">
+        </div>
+        <div class="shot">
+          <img src="./actual-data.png" alt="ピクセル単位の測定結果を表示した実際のデータ一覧画面">
+        </div>
+      </div>
+      <p class="muted">実際のアプリをシミュレータで撮影した画面です。写真部分には生成したサンプル素材を使用しています。2.000mは基準距離を2mに設定した換算デモで、写っている物の実測値ではありません。斜め撮影の補正や奥行き測定の例ではありません。</p>
+    </section>
+
+    <div class="grid">
+      <div class="card">
+        <span class="badge free">無料機能</span>
+        <h2>写真・メモ・書き込みを無料で利用</h2>
+        <ul>
+          <li>通常撮影</li>
+          <li>写真追加、写真閲覧</li>
+          <li>メモ、ペン書き込み</li>
+          <li>写真の共有</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="badge paid">アプリ内購入</span>
+        <h2>LiDAR測定機能</h2>
+        <ul>
+          <li>3D情報保存</li>
+          <li>写真上での2点間距離測定</li>
+          <li>任意基準による位置確認</li>
+          <li>CSV出力、HTMLビューア出力</li>
+        </ul>
+      </div>
+    </div>
+
+    <section>
+      <h2>測定方法の違い</h2>
+      <h3>通常写真の測定</h3>
+      <p>通常写真では写真上のピクセル距離を測定します。m表示への縮尺換算は、平らな対象をほぼ正面から撮影し、既知の長さの基準と対象が同じ平面にある場合の目安です。同じ平面でも斜め撮影では遠近による誤差が出ます。この誤差や奥行きの違いは補正されません。通常写真1枚から奥行きは取得できません。</p>
+      <p>通常撮影または写真追加で写真を保存し、必要に応じてメモやペン書き込みを追加できます。保存した写真はあとから確認し、共有できます。</p>
+      <h3>LiDARなしのAR測定</h3>
+      <p>撮影時に写真と一緒に保存したAR特徴点の3D座標から、奥行きを含む2点間距離を計算します。通常写真や取り込んだ写真だけでは利用できません。P1・P2はドラッグで調整でき、近くの取得済み3D点に合わせて距離を更新します。測定できる点がない場合は元の位置を保持します。測定値は撮影条件や選択点に影響されるため、必要な精度に応じて実測値と照合してください。</p>
+      <h3>測定結果の削除</h3>
+      <p>データ一覧の測定結果を左へスワイプして「削除」を選びます。複数の結果を選択し、「測定データ」見出し横のゴミ箱からまとめて削除することもできます。写真と撮影時の測定用データは残ります。</p>
+      <h3>LiDAR測定</h3>
+      <p>LiDAR対応端末で有料機能を購入すると、撮影時に保存した深度データから奥行きを含む距離を計算し、位置確認、CSV出力、HTMLビューア出力が利用できます。必要な精度に応じて実測値と照合してください。</p>
+    </section>
+
+    <section class="english">
+      <h2>For International Users</h2>
+      <p><a href="./en.html">English support page</a> — The current app interface is in Japanese.</p>
+      <p>Measurable Photo is designed for field work, inspections, construction notes, repairs, and photo records. Basic photo capture, importing, viewing, notes, pen markups, and sharing are free.</p>
+      <p>On LiDAR-compatible iPhone and iPad models, the paid measurement feature can save 3D information, measure two-point distances on photos, check positions, and export CSV or HTML viewer files.</p>
+    </section>
+
+    <section>
+      <h2>よくある質問</h2>
+      <h3>LiDAR非対応端末でも使えますか？</h3>
+      <p>はい。通常撮影、写真追加、閲覧、メモ、ペン書き込み、共有はLiDAR非対応端末でも利用できます。</p>
+
+      <h3>購入しない場合はどうなりますか？</h3>
+      <p>無料機能はそのまま使えます。LiDAR測定、CSV出力、HTMLビューア出力などの測定関連機能を選択したときに購入画面が表示されます。</p>
+
+      <h3>Can I use the app outside Japan?</h3>
+      <p>Availability depends on your App Store region. Ordinary photos use pixels, or an estimated scale from a known reference length. Depth-aware measurements require 3D information saved at capture time. The app interface is currently in Japanese.</p>
+
+      <h3>購入を復元できますか？</h3>
+      <p>はい。購入画面の「購入を復元」から、同じApple Accountで購入済みの機能を復元できます。</p>
+    </section>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <p>不具合やご質問がある場合は、以下のメールアドレスまでご連絡ください。</p>
+      <p><a href="mailto:appokayou@gmail.com">appokayou@gmail.com</a></p>
+      <p class="muted">プライバシーポリシーは <a href="./privacy.html">こちら</a> です。</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2026 Youji Okamura</p>
+    </div>
+  </footer>
+</body>
+</html>
